@@ -1,6 +1,80 @@
-import {} from "framer-motion";
-const Works = () => {
-  return <div>Works</div>;
+// import framer motion
+import { motion } from "framer-motion";
+
+// import Hero Slider
+
+// import components
+import { SectionWrapper } from "../hoc";
+import { projects } from "../constants";
+import { fadeIn, textVariant } from "../utils/motion";
+import { Link } from "react-router-dom";
+
+// import icons
+import { AiFillGithub, AiFillEye } from "react-icons/ai";
+
+const ProjectCard = ({ index, name, description, image, source_code_link }) => {
+  return (
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+      {/* card */}
+      <div className="relative h-60 overflow-hidden shadow-[0px_5px_15px_rgba(0,0,0,0.2)] flex justify-center items-center group bg-black">
+        {/* box img */}
+        <div>
+          <img src={image} alt="" />
+        </div>
+        {/* content */}
+        <div className="absolute -bottom-96 w-full h-full flex justify-center items-center z-10 flex-col backdrop-blur-lg shadow-[0_-10px_10px_rgba(0,0,0,0.1)] border border-solid border-[rgba(255,255,255,0.2)]  group-hover:bottom-0 transition-all duration-[.5s]">
+          {/* box content */}
+          <div className="flex justify-center items-center flex-col">
+            <h3 className="text-white uppercase tracking-[0.2px] font-medium text-sm text-center my-4 leading-4 duration-[1.5s] opacity-0 -translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-all delay-300">
+              {name}
+            </h3>
+            <p className="text-white uppercase text-xs px-4-3 font-medium text-center duration-[1.5s] opacity-0 translate-y-10 delay-300 group-hover:opacity-100 group-hover:translate-y-0 transition-all">
+              {description}
+            </p>
+          </div>
+          {/* icons */}
+          <div className="flex gap-4 mt-5 text-white duration-[1.5s] opacity-0 translate-y-10 delay-300 group-hover:opacity-100 text-lg group-hover:translate-y-0 transition-all">
+            <Link target={"_blank"} to={`${source_code_link}`}>
+              <AiFillGithub />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
 };
 
-export default Works;
+const Works = () => {
+  return (
+    <section className="lg:w-[calc(110%-5rem)] relative overflow-hidden">
+      <h2 className="absolute h1 -top-[4rem] left-0 text-[20rem] overflow-hidden text-black/5">
+        Works
+      </h2>
+      <motion.div variants={textVariant()}>
+        <p className="p mt-10 text-center lg:text-left">Mi Portafolio</p>
+        <h2 className="h2 text-center lg:text-left">Mis Últimos proyectos</h2>
+      </motion.div>
+      <div className="w-full flex">
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className="mt-3 max-w-3xl leading-[1.8rem] text-center lg:text-left"
+        >
+          A continuación les presento una pequeña galería de los últimos
+          proyectos que recientemente he realizado, los cuales son una reflejo
+          de mi capacidad para poder resolver problemas complejos, trabajar con
+          diferentes tecnologías y administrar proyectos de manera efectiva. Los
+          he hecho con mucho cariño, alguno de ellos junto a personas
+          increíbles. Cada proyecto se describe brevemente con el enlace a
+          repositorios de código y demostraciones en vivo.
+        </motion.p>
+      </div>
+      <div className="mt-20 grid lg:grid-cols-5 md:grid-cols-4 grid-cols-2 justify-center lg:justify-start">
+        {projects.map((project, index) => (
+          <ProjectCard key={`project-${index}`} index={index} {...project} />
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default SectionWrapper(Works, "");
