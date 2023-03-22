@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 // import components
 import { textVariant, slideIn } from "../utils/motion.js";
-import { SectionWrapper } from "../hoc";
 import Tech from "../components/Tech";
 
 const About = () => {
@@ -41,4 +40,4 @@ const About = () => {
   );
 };
 
-export default SectionWrapper(About, "about");
+export default About;
