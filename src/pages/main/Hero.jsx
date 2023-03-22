@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 // import components
 import { styles } from "../../styles.js";
 import { ComputersCanvas } from "../../components/canvas";
+import { transitionGeneral } from "../../utils/motion.js";
 
 // import Link
 import { Link } from "react-router-dom";
@@ -21,7 +22,13 @@ const Hero = () => {
           <div className="w-5 h-5 rounded-full bg-tertiary" />
           <div className="w-1 sm:h-80 h-40 orange-gradient" />
         </div>
-        <div className="flex flex-col justify-center items-center lg:items-start">
+        <motion.div
+          initial={{ opacity: 0, y: "-50%" }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: "-50%" }}
+          transition={transitionGeneral}
+          className="flex flex-col justify-center items-center lg:items-start"
+        >
           <h1 className="h1 text-center lg:text-left">
             Hola, soy <span className="text-tertiary">Jhoswe Genner &</span>
           </h1>
@@ -64,7 +71,7 @@ const Hero = () => {
               Contáctame
             </span>
           </Link>
-        </div>
+        </motion.div>
       </div>
       <ComputersCanvas />
       <div className="flex absolute bottom-3 lg:bottom-5 w-full justify-center items-center">

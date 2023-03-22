@@ -18,7 +18,7 @@ const FeedbackCard = ({
   image,
 }) => (
   <motion.div
-    variants={fadeIn("", "spring", index * 0.5, 0.75)}
+    variants={fadeIn("left", "spring", index * 0.5, 0.75)}
     className="bg-tertiary p-10 rounded-3xl lg:w-[320px] text-white"
   >
     <p className="text-5xl font-primary">"</p>

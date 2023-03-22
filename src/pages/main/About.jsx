@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 
 // import components
-import { fadeIn, textVariant } from "../../utils/motion.js";
+import { textVariant, slideIn } from "../../utils/motion.js";
 import { SectionWrapper } from "../../hoc";
 import Tech from "../../components/Tech";
 
@@ -14,7 +14,7 @@ const About = () => {
         <h2 className="h2 text-center lg:text-left">Un poco de mi</h2>
       </motion.div>
       <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
+        variants={slideIn("left", "spring", 0.1, 1.5)}
         className="lg:max-w-3xl max-w-full leading-[1.8rem] text-center lg:text-left"
       >
         Desde mi niñez, siempre sentí una gran pasión por el mundo de la

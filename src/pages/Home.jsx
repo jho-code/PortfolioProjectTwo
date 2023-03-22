@@ -1,13 +1,16 @@
-// import Router
-import { BrowserRouter as Router } from "react-router-dom";
-
 // import pages
 import { AboutM, ContactM, Feedbacks, Hero, Works } from "../pages";
 
+// import transition
+import { slideIn } from "../utils/motion.js";
+
+// import motion
+import { motion } from "framer-motion";
+
 const App = () => {
   return (
-    <div>
-      <div className="relative z-0 ">
+    <motion.section variants={slideIn("up", "spring", 0, 1.5)}>
+      <div className="relative z-0">
         <div className="bg-hero-pattern-w bg-cover bg-no-repeat bg-center">
           <Hero />
         </div>
@@ -38,7 +41,7 @@ const App = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

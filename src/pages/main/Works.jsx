@@ -6,11 +6,16 @@ import { motion } from "framer-motion";
 // import components
 import { SectionWrapper } from "../../hoc";
 import { projects } from "../../constants";
-import { fadeIn, textVariant } from "../../utils/motion";
+import {
+  fadeIn,
+  transitionGeneral,
+  textVariant,
+  slideIn,
+} from "../../utils/motion";
 import { Link } from "react-router-dom";
 
 // import icons
-import { AiFillGithub, AiFillEye } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 
 const ProjectCard = ({ index, name, description, image, source_code_link }) => {
   return (
@@ -51,10 +56,15 @@ const Works = () => {
         <p className="p text-center lg:text-left">Mi Portafolio</p>
         <h2 className="h2 text-center lg:text-left">Mis Últimos proyectos</h2>
       </motion.div>
-      <div>
+      <motion.div
+        initial={{ opacity: 0, x: "50%" }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: "50%" }}
+        transition={transitionGeneral}
+      >
         <div className="w-full flex justify-center lg:justify-start">
           <motion.p
-            variants={fadeIn("", "", 0.1, 1)}
+            variants={fadeIn("right", "spring", 0.1, 1.5)}
             className="mt-3 max-w-3xl leading-[1.8rem] text-center lg:text-left"
           >
             A continuación les presento una pequeña galería de los últimos
@@ -66,14 +76,14 @@ const Works = () => {
             enlace a repositorios de código y demostraciones en vivo.
           </motion.p>
         </div>
-      </div>
+      </motion.div>
       <div className="mt-20 grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 justify-center lg:justify-start">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
       <motion.div
-        variants={fadeIn("up", "spring", 2, 0.75)}
+        variants={slideIn("right", "spring", 1.5, 0.75)}
         className=" mt-10 flex lg:items-end lg:justify-end items-center justify-center"
       >
         <Link
