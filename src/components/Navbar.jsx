@@ -22,9 +22,7 @@ const Navbar = () => {
   return (
     <header
       className={`${
-        bg
-          ? "bg-[#FFF] h-[5rem] lg:h-[6.5rem]"
-          : "bg-[#EDF4FF] h-[6rem] lg:h-[7.5rem]"
+        bg ? "bg-[#EDF4FF] h-[4rem] lg:h-[5.5rem]" : "h-[5rem] lg:h-[6.5rem]"
       } flex items-center fixed w-full px-[2rem] lg:px-[5rem] z-30  transition-all duration-300`}
     >
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">

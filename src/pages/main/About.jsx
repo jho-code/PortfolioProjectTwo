@@ -1,27 +1,21 @@
-// import Tilt
-import Tilt from "react-tilt";
-
 // import motion
 import { motion } from "framer-motion";
 
 // import components
-import { fadeIn, textVariant } from "../utils/motion.js";
-import { SectionWrapper } from "../hoc";
-import Tech from "./Tech";
+import { fadeIn, textVariant } from "../../utils/motion.js";
+import { SectionWrapper } from "../../hoc";
+import Tech from "../../components/Tech";
 
 const About = () => {
   return (
-    <section className="lg:w-[calc(110%-5rem)] relative overflow-hidden">
-      <h2 className="h1 absolute -top-[4rem] left-[20rem] text-[20rem] text-black/5">
-        About
-      </h2>
+    <section>
       <motion.div variants={textVariant()}>
         <p className="p mt-10 text-center lg:text-left">Introducción</p>
         <h2 className="h2 text-center lg:text-left">Un poco de mi</h2>
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="text-[1rem] lg:max-w-3xl max-w-full leading-[1.8rem] text-center lg:text-left"
+        className="lg:max-w-3xl max-w-full leading-[1.8rem] text-center lg:text-left"
       >
         Desde mi niñez, siempre sentí una gran pasión por el mundo de la
         tecnología, dedicando largas horas a explorar diferentes programas y

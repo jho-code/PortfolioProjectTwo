@@ -181,55 +181,34 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "...Tuve el privilegio de ser su estudiante en LarnU, donde me formé como desarrollador Full Stack. Jhoswe es un excelente profesional y docente, con una habilidad innata para explicar los conceptos complejos de manera clara y concisa. ...",
+    name: "Alex Elgueta Rivas",
+    designation: "Desarrollador Full Stack",
+    company: "LarnU",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT7LKGs1beHKmTpJo82648DLyvk6S1PLkv2yNMJLJyBdg2YwVmFy0qS1PG93pT_Poy5Ow",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "Jhoswe es un programador Full-Stack y profesor destacado. En su paso por LarnU, desempeñó un papel clave en el desarrollo de nuestra app y también como profesor de nuestro Bootcamp Full-Stack intensivo. Jhoswe es un desarrollador de software talentoso y altamente capacitado que tiene una sólida experiencia en el diseño y desarrollo de aplicaciones complejas...",
+    name: "Jorge Alonso",
+    designation: "CEO",
+    company: "LarnU",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnwCTe__-Kbp8YmniNljYC3kbG5T1KmVGRwCzq-MfZ1ur0ovcKqIuhblvTQAk8aG9t5I8",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "Con Jhoswe, dimos clases en LarnU. Tiene gran capacidad para comunicar conceptos complejos de manera clara y concisa. Es proactivo, comprometido y con buena disposición para ayudar a sus alumnos. Además, ayuda a sus compañeros y busca mejorar día a día.",
+    name: "Emiliano Rotta",
+    designation: "Instructor",
+    company: "Ada ITW",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzFpXe7WSXKC8VGltjf3ItYWVbOiaXyig78-b-c8pIRnX_O_HtWXtx64N_SeUbJo7bHg",
   },
 ];
 
 const projects = [
-  {
-    name: "Car Rent",
-    description: "Web-based platform ",
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Car Rent",
-    description: "Web-based platform ",
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Car Rent",
-    description: "Web-based platform ",
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Car Rent",
-    description: "Web-based platform ",
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
   {
     name: "Car Rent",
     description: "Web-based platform ",

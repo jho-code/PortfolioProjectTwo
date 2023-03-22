@@ -2,8 +2,8 @@
 import { motion } from "framer-motion";
 
 // import components
-import { styles } from "../styles.js";
-import { ComputersCanvas } from "./canvas";
+import { styles } from "../../styles.js";
+import { ComputersCanvas } from "../../components/canvas";
 
 // import Link
 import { Link } from "react-router-dom";
@@ -25,8 +25,8 @@ const Hero = () => {
           <h1 className="h1 text-center lg:text-left">
             Hola, soy <span className="text-tertiary">Jhoswe Genner &</span>
           </h1>
-          <div className="text-[1.1rem] lg:text-[1.3rem] font-secondary mb-12 lg:mb-10">
-            <span> Soy un </span>
+          <div className="mt-8 lg:mt-0 text-[1.1rem] lg:text-[1.3rem] font-secondary mb-12 lg:mb-10">
+            <span> Soy </span>
             <TypeAnimation
               sequence={[
                 "Licenciado en Turismo",
@@ -46,7 +46,7 @@ const Hero = () => {
               repeat={Infinity}
             />
           </div>
-          <p className="text-center mb-12 lg:text-left w-[70%]">
+          <p className="text-center mb-12 lg:text-left w-[70%] hidden sm:block">
             Soy desarrollador full stack con más de 3 años en programación y 9
             años de experiencia en la industria del turismo.
             <span className="hidden lg:inline-block">
@@ -57,7 +57,7 @@ const Hero = () => {
           </p>
           <Link
             to={"/contact"}
-            className="inline-block z-[2] leading-4 ease-in-out duration-[0.5s] btn mb-[1.5rem]"
+            className="inline-block z-[2] leading-4 ease-in-out duration-[0.5s] btn mb-[1.5rem] btn2"
           >
             <i />
             <span className="z-[2] ease-in-out duration-[0.5s]">
@@ -67,7 +67,7 @@ const Hero = () => {
         </div>
       </div>
       <ComputersCanvas />
-      <div className="absolute bottom-3 lg:bottom-5 w-full flex justify-center items-center">
+      <div className="flex absolute bottom-3 lg:bottom-5 w-full justify-center items-center">
         <a href="#about">
           <div className="w-9 h-16 rounded-3xl border-[3px] border-secondary flex justify-center items-start p-2">
             <motion.div

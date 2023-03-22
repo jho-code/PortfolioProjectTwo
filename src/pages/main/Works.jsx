@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 // import Hero Slider
 
 // import components
-import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import { SectionWrapper } from "../../hoc";
+import { projects } from "../../constants";
+import { fadeIn, textVariant } from "../../utils/motion";
 import { Link } from "react-router-dom";
 
 // import icons
@@ -14,7 +14,7 @@ import { AiFillGithub, AiFillEye } from "react-icons/ai";
 
 const ProjectCard = ({ index, name, description, image, source_code_link }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.2, 0.75)}>
       {/* card */}
       <div className="relative h-60 overflow-hidden shadow-[0px_5px_15px_rgba(0,0,0,0.2)] flex justify-center items-center group bg-black">
         {/* box img */}
@@ -46,33 +46,44 @@ const ProjectCard = ({ index, name, description, image, source_code_link }) => {
 
 const Works = () => {
   return (
-    <section className="lg:w-[calc(110%-5rem)] relative overflow-hidden">
-      <h2 className="absolute h1 -top-[4rem] left-0 text-[20rem] overflow-hidden text-black/5">
-        Works
-      </h2>
+    <section>
       <motion.div variants={textVariant()}>
-        <p className="p mt-10 text-center lg:text-left">Mi Portafolio</p>
+        <p className="p text-center lg:text-left">Mi Portafolio</p>
         <h2 className="h2 text-center lg:text-left">Mis Últimos proyectos</h2>
       </motion.div>
-      <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 max-w-3xl leading-[1.8rem] text-center lg:text-left"
-        >
-          A continuación les presento una pequeña galería de los últimos
-          proyectos que recientemente he realizado, los cuales son una reflejo
-          de mi capacidad para poder resolver problemas complejos, trabajar con
-          diferentes tecnologías y administrar proyectos de manera efectiva. Los
-          he hecho con mucho cariño, alguno de ellos junto a personas
-          increíbles. Cada proyecto se describe brevemente con el enlace a
-          repositorios de código y demostraciones en vivo.
-        </motion.p>
+      <div>
+        <div className="w-full flex justify-center lg:justify-start">
+          <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className="mt-3 max-w-3xl leading-[1.8rem] text-center lg:text-left"
+          >
+            A continuación les presento una pequeña galería de los últimos
+            proyectos que recientemente he realizado, los cuales son una reflejo
+            de mi capacidad para poder resolver problemas complejos, trabajar
+            con diferentes tecnologías y administrar proyectos de manera
+            efectiva. Los he hecho con mucho cariño, alguno de ellos junto a
+            personas increíbles. Cada proyecto se describe brevemente con el
+            enlace a repositorios de código y demostraciones en vivo.
+          </motion.p>
+        </div>
       </div>
-      <div className="mt-20 grid lg:grid-cols-5 md:grid-cols-4 grid-cols-2 justify-center lg:justify-start">
+      <div className="mt-20 grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 justify-center lg:justify-start">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
+      <motion.div
+        variants={fadeIn("up", "spring", 2, 0.75)}
+        className=" mt-10 flex lg:items-end lg:justify-end items-center justify-center"
+      >
+        <Link
+          to={"/portfolio"}
+          className="inline-block z-[2] leading-4 ease-in-out duration-[0.5s] btn mb-[1.5rem] btn2"
+        >
+          <i />
+          <span className="z-[2] ease-in-out duration-[0.5s]">Ver más</span>
+        </Link>
+      </motion.div>
     </section>
   );
 };
