@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 // import components
 import { textVariant, slideIn } from "../../utils/motion.js";
 import { SectionWrapper } from "../../hoc";
-import Tech from "../../components/Tech";
+import Tech from "./Tech";
 
 const About = () => {
   return (

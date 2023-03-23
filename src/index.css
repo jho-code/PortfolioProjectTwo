@@ -35,6 +35,41 @@
   scroll-behavior: smooth;
 }
 
+/* gota */
+.gota {
+  position: relative;
+  width: 175px;
+  height: 175px;
+  box-shadow: inset 50px 50px 30px rgba(0, 0, 0, 0.05),
+    25px 35px 20px rgba(0, 0, 0, 0.05), 25px 30px 30px rgba(0, 0, 0, 0.05),
+    inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.gota::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+.gota::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
 /* boton */
 .btn {
   position: relative;

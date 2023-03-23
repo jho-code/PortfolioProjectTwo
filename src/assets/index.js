@@ -4,6 +4,8 @@ import creator from "./creator.png";
 import frontend from "./frontend.png";
 import fullstack from "./fullstack.png";
 import github from "./github.png";
+import teacher from "./teacher.png";
+import turismo from "./turismo.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -20,10 +22,11 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import larnu from "./company/larnu.png";
+import zulema from "./company/zulema.jpg";
+import novotel from "./company/novotel.jpg";
+import condor from "./company/condor.jpg";
+import latam from "./company/latam.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -36,6 +39,8 @@ export {
   frontend,
   fullstack,
   github,
+  teacher,
+  turismo,
   css,
   docker,
   figma,
@@ -50,10 +55,11 @@ export {
   java,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+  larnu,
+  zulema,
+  novotel,
+  condor,
+  latam,
   carrent,
   jobit,
   tripguide,
