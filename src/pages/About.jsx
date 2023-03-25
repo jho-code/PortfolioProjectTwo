@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 // import components
-import { textVariant, slideIn, fadeIn } from "../utils/motion.js";
 import { SectionWrapper } from "../hoc";
 import { services } from "../constants/index.js";
 import Tech from "./main/Tech";
@@ -87,7 +86,7 @@ const About = () => {
       <Tech />
       <div>
         <h2 className="font-secondary font-normal lg:text-[1.5rem] text-[1.5rem] text-center">
-          Quieres hablar con migo?
+          ¿Quieres hablar conmigo?
         </h2>
         <div className="flex justify-center">
           <Link

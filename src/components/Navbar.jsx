@@ -30,7 +30,7 @@ const Navbar = () => {
         <Link to={"/"} className="flex items-center gap-2">
           <img
             src={logo}
-            alt=""
+            alt="logo"
             className="w-12 h-12 object-contain"
             onClick={() => {
               setActive("");
@@ -47,7 +47,10 @@ const Navbar = () => {
               className={`${
                 active === link.title ? "text-tertiary" : "text-secondary"
               } hover:text-tertiary text-[.85rem] font-medium cursor-pointer uppercase ease-in-out duration-300 transition-colors`}
-              onClick={() => setActive(link.title)}
+              onClick={() => {
+                setActive(link.title);
+                window.scrollTo(0, 0);
+              }}
             >
               {link.title}
             </Link>

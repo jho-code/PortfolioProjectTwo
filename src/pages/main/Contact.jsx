@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 // import motion
 import { motion } from "framer-motion";
@@ -10,62 +10,63 @@ import emailjs from "@emailjs/browser";
 import { EarthCanvas } from "../../components/canvas";
 import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion.js";
+import { useFormik } from "formik";
+import { basicSchema } from "../../schemas";
 
 const Contact = () => {
-  const formRef = useRef();
-
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    setForm({ ...form, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    emailjs
-      .send(
-        "service_u5crfnf",
-        "template_pt6i5zw",
-        {
-          from_name: form.name,
-          to_name: "Jhoswe",
-          from_email: form.email,
-          to_email: "jhoswe.castro@gmail.com",
-          subject: form.subject,
-          message: form.message,
-        },
-        "kVuo2IHv5mLM7zORs"
-      )
-      .then(() => {
-        setLoading(false);
-        alert(
-          "Gracias por tu mensaje, pronto te contactaré para poder hablar un poco más"
-        );
-        setForm(
+  const onSubmit = (values, actions) => {
+    try {
+      setLoading(true);
+      emailjs
+        .send(
+          "service_u5crfnf",
+          "template_pt6i5zw",
           {
-            name: "",
-            email: "",
-            subject: "",
-            message: "",
+            from_name: values.name,
+            to_name: "Jhoswe",
+            from_email: values.email,
+            to_email: "jhoswe.castro@gmail.com",
+            subject: values.subject,
+            message: values.message,
           },
-          (error) => {
-            setLoading(false);
-            console.log(error);
-            alert("Ups, algo salio mal");
-          }
-        );
-      });
+          "kVuo2IHv5mLM7zORs"
+        )
+        .then(() => {
+          setLoading(false);
+          alert(
+            "Gracias por tu mensaje, pronto te contactaré para poder hablar un poco más"
+          );
+          actions.resetForm();
+        });
+    } catch {
+      setLoading(false);
+      actions.resetForm();
+      alert("Ups, algo salio mal");
+    }
   };
+
+  const {
+    handleSubmit,
+    values,
+    isSubmitting,
+    handleBlur,
+    errors,
+    handleChange,
+    touched,
+  } = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+    validationSchema: basicSchema,
+    onSubmit,
+  });
+
+  // console.log(errors);
 
   return (
     <section className="lg:flex-row flex-col-reverse flex lg:gap-10 overflow-hidden">
@@ -73,7 +74,7 @@ const Contact = () => {
         <p className="p mt-10 text-center lg:text-left">Hablemos</p>
         <h2 className="h2 text-center lg:text-left">Contacto</h2>
         <form
-          ref={formRef}
+          autoComplete="off"
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
         >
@@ -81,48 +82,63 @@ const Contact = () => {
             <input
               type="text"
               name="name"
-              value={form.name}
+              value={values.name}
               onChange={handleChange}
+              onBlur={handleBlur}
               placeholder="Nombre"
-              className="px-6 py-4 placeholder:text-secondary text-primary outline-none border-b border-b-primary h-12 bg-transparent w-full font-medium capitalize"
+              className={errors.name && touched.name ? "input error" : "input"}
             />
             <input
               type="text"
               name="email"
-              value={form.email}
+              value={values.email}
               onChange={handleChange}
+              onBlur={handleBlur}
               placeholder="Email"
-              className="px-6 py-4 placeholder:text-secondary text-primary outline-none border-b border-b-primary h-12 bg-transparent w-full font-medium"
+              className={
+                errors.email && touched.email ? "input error ca" : "input"
+              }
             />
           </div>
           <input
             type="text"
             name="subject"
-            value={form.subject}
+            value={values.subject}
             onChange={handleChange}
+            onBlur={handleBlur}
             placeholder="Asunto"
-            className="px-6 py-4 placeholder:text-secondary text-primary outline-none border-b border-b-primary h-12 bg-transparent w-full font-medium"
+            className={
+              errors.subject && touched.subject ? "input error" : "input"
+            }
           />
           <textarea
             rows="7"
             name="message"
-            value={form.message}
+            value={values.message}
             onChange={handleChange}
+            onBlur={handleBlur}
             placeholder="Mensaje"
-            className="px-6 py-4 placeholder:text-secondary text-primary outline-none border-b border-b-primary bg-transparent w-full font-medium"
+            className={
+              errors.message && touched.message ? "input error" : "input"
+            }
           />
           <div className="flex justify-center lg:justify-start">
-            {loading ? (
-              "Enviando..."
-            ) : (
-              <button className="inline-block z-[2] leading-4 ease-in-out duration-[0.5s] btn btn2 mb-[1.5rem]">
-                <i />
-                <span className="z-[2] ease-in-out duration-[0.5s]">
-                  Enviar
-                </span>
-              </button>
-            )}
+            <button
+              disabled={isSubmitting}
+              type="submit"
+              className="inline-block z-[2] leading-4 ease-in-out duration-[0.5s] btn btn2 mb-[1.5rem]"
+            >
+              <i />
+              <span className="z-[2] ease-in-out duration-[0.5s]">
+                {loading ? "Enviando..." : "Enviar"}
+              </span>
+            </button>
           </div>
+          {errors.email && touched.email && (
+            <p className="text-[#fc8181] text-center mt-[-2rem]">
+              {errors.email}
+            </p>
+          )}
         </form>
       </motion.div>
       <motion.div

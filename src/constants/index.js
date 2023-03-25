@@ -278,4 +278,74 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const projects2 = [
+  {
+    name: "Car Rent",
+    description: "Web-based platform ",
+    image: carrent,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Car Rent",
+    description: "Web-based platform ",
+    image: carrent,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Car Rent",
+    description: "Web-based platform ",
+    image: carrent,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Car Rent",
+    description: "Web-based platform ",
+    image: carrent,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Job IT",
+    description: "Web application that .",
+    image: jobit,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Trip Guide",
+    description: "A comprehensive travel booking ",
+    image: tripguide,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Trip Guide",
+    description: "A comprehensive travel booking ",
+    image: tripguide,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Trip Guide",
+    description: "A comprehensive travel booking ",
+    image: tripguide,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Trip Guide",
+    description: "A comprehensive travel booking ",
+    image: tripguide,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Trip Guide",
+    description: "A comprehensive travel booking ",
+    image: tripguide,
+    source_code_link: "https://github.com/",
+  },
+];
+
+export {
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  projects,
+  projects2,
+};

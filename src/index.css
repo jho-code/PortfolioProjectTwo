@@ -46,6 +46,23 @@
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 
+.input {
+  outline: none;
+  border-bottom: 1px solid #6e8b9f;
+  background: transparent;
+  width: 100%;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+}
+
+.error {
+  border-bottom: 1px solid #fc8181;
+}
+
+input::placeholder {
+  color: #6e8b9f;
+}
+
 .gota::before {
   content: "";
   position: absolute;
