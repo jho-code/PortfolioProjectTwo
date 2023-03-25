@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { CursorContext } from "../context/CursorContext.jsx";
+
 // import motion
 import { motion } from "framer-motion";
 
@@ -26,6 +29,8 @@ const ServiceCard = ({ title, index, icon }) => {
 };
 
 const About = () => {
+  const { mouseEnterHandler, mouseLeaverHandler } = useContext(CursorContext);
+
   return (
     <motion.section
       initial={{ opacity: 0, y: "100%" }}
@@ -33,7 +38,7 @@ const About = () => {
       exit={{ opacity: 0, y: "100%" }}
       transition={transitionGeneral}
     >
-      <div>
+      <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaverHandler}>
         <h2 className="h2 text-center lg:text-left">Acerca de Mi</h2>
       </div>
       <div className="flex flex-col lg:flex-row h-full items-center justify-center gap-x-24 text-center lg:text-left ">
@@ -85,7 +90,11 @@ const About = () => {
       <Experience />
       <Tech />
       <div>
-        <h2 className="font-secondary font-normal lg:text-[1.5rem] text-[1.5rem] text-center">
+        <h2
+          onMouseEnter={mouseEnterHandler}
+          onMouseLeave={mouseLeaverHandler}
+          className="font-secondary font-normal lg:text-[1.5rem] text-[1.5rem] text-center"
+        >
           ¿Quieres hablar conmigo?
         </h2>
         <div className="flex justify-center">

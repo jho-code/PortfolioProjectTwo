@@ -59,7 +59,7 @@ const Hero = () => {
               <span className="hidden lg:inline-block">
                 Me he destacado en el desarrollo de aplicaciones web escalables,
                 seguras y de alta calidad utilizando tecnologías como HTML, CSS,
-                JavaScript, React y NodeJS.
+                JavaScript, React, NodeJS y ExpressJS.
               </span>
             </p>
           </motion.div>

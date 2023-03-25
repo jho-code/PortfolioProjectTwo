@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { CursorContext } from "../context/CursorContext.jsx";
+
 // import motion
 import { motion } from "framer-motion";
 
@@ -44,6 +47,8 @@ const ProjectCard = ({ index, name, description, image, source_code_link }) => {
 };
 
 const Portfolio = () => {
+  const { mouseEnterHandler, mouseLeaverHandler } = useContext(CursorContext);
+
   return (
     <motion.section
       initial={{ opacity: 0, y: "100%" }}
@@ -51,7 +56,7 @@ const Portfolio = () => {
       exit={{ opacity: 0, y: "100%" }}
       transition={transitionGeneral}
     >
-      <div>
+      <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaverHandler}>
         <h2 className="h2 text-center lg:text-left">Mi Portafolio</h2>
       </div>
       <div className="flex flex-col lg:flex-row h-full items-center justify-center gap-x-24 text-center lg:text-left ">
@@ -77,7 +82,11 @@ const Portfolio = () => {
         ))}
       </div>
       <div className="mt-12">
-        <h2 className="font-secondary font-normal lg:text-[1.5rem] text-[1.5rem] text-center">
+        <h2
+          onMouseEnter={mouseEnterHandler}
+          onMouseLeave={mouseLeaverHandler}
+          className="font-secondary font-normal lg:text-[1.5rem] text-[1.5rem] text-center"
+        >
           ¿Quieres hablar conmigo?
         </h2>
         <div className="flex justify-center">

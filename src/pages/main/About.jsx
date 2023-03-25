@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { CursorContext } from "../../context/CursorContext.jsx";
+
 // import motion
 import { motion } from "framer-motion";
 
@@ -7,9 +10,15 @@ import { SectionWrapper } from "../../hoc";
 import Tech from "./Tech";
 
 const About = () => {
+  const { mouseEnterHandler, mouseLeaverHandler } = useContext(CursorContext);
+
   return (
     <section>
-      <motion.div variants={textVariant()}>
+      <motion.div
+        variants={textVariant()}
+        onMouseEnter={mouseEnterHandler}
+        onMouseLeave={mouseLeaverHandler}
+      >
         <p className="p mt-10 text-center lg:text-left">Introducción</p>
         <h2 className="h2 text-center lg:text-left">Un poco de mi</h2>
       </motion.div>

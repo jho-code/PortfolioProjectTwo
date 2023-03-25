@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { CursorContext } from "../../context/CursorContext.jsx";
+
 // import framer motion
 import { motion } from "framer-motion";
 
@@ -50,9 +53,15 @@ const ProjectCard = ({ index, name, description, image, source_code_link }) => {
 };
 
 const Works = () => {
+  const { mouseEnterHandler, mouseLeaverHandler } = useContext(CursorContext);
+
   return (
     <section>
-      <motion.div variants={textVariant()}>
+      <motion.div
+        variants={textVariant()}
+        onMouseEnter={mouseEnterHandler}
+        onMouseLeave={mouseLeaverHandler}
+      >
         <p className="p text-center lg:text-left">Mi Portafolio</p>
         <h2 className="h2 text-center lg:text-left">Mis Últimos proyectos</h2>
       </motion.div>

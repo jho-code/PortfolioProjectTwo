@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { CursorContext } from "../../context/CursorContext.jsx";
+
 // import vertical element
 import {
   VerticalTimeline,
@@ -43,9 +46,11 @@ const ExperienceCard = ({ experience }) => (
 );
 
 const Experience = () => {
+  const { mouseEnterHandler, mouseLeaverHandler } = useContext(CursorContext);
+
   return (
     <>
-      <div>
+      <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaverHandler}>
         <h2 className="h2 lg:text-[2.5rem] text-[1.8rem] text-center lg:text-left">
           Mi experiencia
         </h2>
