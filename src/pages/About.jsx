@@ -93,7 +93,7 @@ const About = () => {
         <h2
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaverHandler}
-          className="font-secondary font-normal lg:text-[1.5rem] text-[1.5rem] text-center"
+          className="p font-secondary font-normal lg:text-[1.2rem] text-[1rem] text-center"
         >
           ¿Quieres hablar conmigo?
         </h2>

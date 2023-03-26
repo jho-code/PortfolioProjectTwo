@@ -4,17 +4,22 @@ import { motion } from "framer-motion";
 // import components
 import { styles } from "../../styles.js";
 import { ComputersCanvas } from "../../components/canvas";
-import { transitionGeneral } from "../../utils/motion.js";
+import { transitionGeneral, slideIn } from "../../utils/motion.js";
 
 // import Link
 import { Link } from "react-router-dom";
 
 // import typeAnimation
 import { TypeAnimation } from "react-type-animation";
+// import "../../utils/hovertree.js";
 
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
+      {/*       <canvas
+        id="canvas"
+        className="absolute left-0 w-[1366] max-w-full h-full z-[1]"
+      ></canvas> */}
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
@@ -63,15 +68,22 @@ const Hero = () => {
               </span>
             </p>
           </motion.div>
-          <Link
-            to={"/contact"}
-            className="inline-block z-[20] leading-4 ease-in-out duration-[0.5s] btn mb-[1.5rem] btn2"
+          <motion.div
+            initial={{ opacity: 0, y: "100%" }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: "100%" }}
+            transition={transitionGeneral}
           >
-            <i />
-            <span className="z-[2] ease-in-out duration-[0.5s]">
-              Contáctame
-            </span>
-          </Link>
+            <Link
+              to={"/contact"}
+              className="inline-block z-[20] leading-4 ease-in-out duration-[0.5s] btn mb-[1.5rem] btn2"
+            >
+              <i />
+              <span className="z-[2] ease-in-out duration-[0.5s]">
+                Contáctame
+              </span>
+            </Link>
+          </motion.div>
         </div>
       </div>
       <ComputersCanvas />
