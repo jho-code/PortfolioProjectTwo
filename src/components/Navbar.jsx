@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 // import components
+import DarkModel from "../components/DarkModel";
 import Socials from "../constants/Socials.jsx";
 import MobileNav from "../components/MobileNav";
 import { navLinks } from "../constants";
@@ -59,6 +60,8 @@ const Navbar = () => {
       </div>
       {/* socials */}
       <Socials />
+      {/* darkmode */}
+      <DarkModel />
       {/* mobile nav */}
       <MobileNav />
     </header>

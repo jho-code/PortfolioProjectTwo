@@ -11,7 +11,7 @@ const App = () => {
   return (
     <motion.section variants={slideIn("up", "spring", 0, 1.5)}>
       <div className="relative z-0">
-        <div className="bg-hero-pattern-w bg-cover bg-no-repeat bg-center">
+        <div className="bg-hero-pattern-w bg-cover bg-no-repeat bg-center dark:bg-hero-pattern">
           <Hero />
         </div>
         <div className="relative overflow-hidden">

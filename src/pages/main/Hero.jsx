@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 // import components
 import { styles } from "../../styles.js";
 import { ComputersCanvas } from "../../components/canvas";
-import { transitionGeneral, slideIn } from "../../utils/motion.js";
+import { transitionGeneral } from "../../utils/motion.js";
 
 // import Link
 import { Link } from "react-router-dom";
@@ -68,22 +68,15 @@ const Hero = () => {
               </span>
             </p>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: "100%" }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: "100%" }}
-            transition={transitionGeneral}
+          <Link
+            to={"/contact"}
+            className="inline-block z-[20] leading-4 ease-in-out duration-[0.5s] btn mb-[1.5rem] btn2"
           >
-            <Link
-              to={"/contact"}
-              className="inline-block z-[20] leading-4 ease-in-out duration-[0.5s] btn mb-[1.5rem] btn2"
-            >
-              <i />
-              <span className="z-[2] ease-in-out duration-[0.5s]">
-                Contáctame
-              </span>
-            </Link>
-          </motion.div>
+            <i />
+            <span className="z-[2] ease-in-out duration-[0.5s]">
+              Contáctame
+            </span>
+          </Link>
         </div>
       </div>
       <ComputersCanvas />

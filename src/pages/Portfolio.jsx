@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 // import components
-import { textVariant, slideIn, fadeIn } from "../utils/motion.js";
+import { fadeIn } from "../utils/motion.js";
 import { SectionWrapper } from "../hoc";
 import { projects2 } from "../constants/index.js";
 import { transitionGeneral } from "../utils/motion.js";
