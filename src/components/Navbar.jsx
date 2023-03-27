@@ -23,7 +23,9 @@ const Navbar = () => {
   return (
     <header
       className={`${
-        bg ? "bg-[#EDF4FF] h-[4rem] lg:h-[5.5rem]" : "h-[5rem] lg:h-[6.5rem]"
+        bg
+          ? "bg-[#EDF4FF] dark:bg-[#090f24] h-[4rem] lg:h-[5.5rem]"
+          : "h-[5rem] lg:h-[6.5rem]"
       } flex items-center fixed w-full px-[2rem] lg:px-[5rem] z-30  transition-all duration-300`}
     >
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">
@@ -46,8 +48,10 @@ const Navbar = () => {
               key={link.id}
               to={`/${link.id}`}
               className={`${
-                active === link.title ? "text-tertiary" : "text-secondary"
-              } hover:text-tertiary text-[.85rem] font-medium cursor-pointer uppercase ease-in-out duration-300 transition-colors`}
+                active === link.title
+                  ? "text-tertiary"
+                  : "text-secondary dark:text-white"
+              } hover:text-tertiary dark:hover:text-tertiary text-[.85rem] font-medium cursor-pointer uppercase ease-in-out duration-300 transition-colors`}
               onClick={() => {
                 setActive(link.title);
                 window.scrollTo(0, 0);

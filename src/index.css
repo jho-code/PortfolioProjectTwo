@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-primary font-secondary bg-white lg:text-base text-sm;
+    @apply text-primary dark:text-white font-secondary dark:bg-[#050816] bg-white lg:text-base text-sm;
   }
 
   .h1 {
@@ -60,6 +60,10 @@
 }
 
 input::placeholder {
+  color: #6e8b9f;
+}
+
+textarea::placeholder {
   color: #6e8b9f;
 }
 

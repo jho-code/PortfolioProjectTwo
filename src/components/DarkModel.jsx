@@ -41,8 +41,7 @@ const DarkModel = () => {
         onClick={handleThemeSwitch}
         className={`${
           theme === "light" ? "bg-primary text-white" : "bg-white text-primary "
-        }
-          // p-4 rounded-full w-12 h-12 cursor-pointer absolute right-2 -bottom-[87vh] flex justify-center items-center`}
+        } p-4 rounded-full w-12 h-12 cursor-pointer absolute right-5 -bottom-[87vh] flex justify-center items-center transition-all duration-500 ease-in-out`}
       >
         {theme === "light" ? <BsFillMoonFill /> : <BsFillSunFill />}
       </button>
