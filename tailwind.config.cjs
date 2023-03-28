@@ -27,8 +27,8 @@ module.exports = {
         card: "0px 35px 120px -15px #211e35",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
-        "hero-pattern-w": "url('/src/assets/herobg white.png')",
+        "hero-pattern": "url('/src/assets/herobg.webp')",
+        "hero-pattern-w": "url('/src/assets/herobg white.webp')",
       },
     },
   },
