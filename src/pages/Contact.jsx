@@ -24,7 +24,7 @@ const Contact = () => {
       setLoading(true);
       emailjs
         .send(
-          "service_u5crfnf",
+          "service_lwln4we",
           "template_pt6i5zw",
           {
             from_name: values.name,
@@ -90,7 +90,8 @@ const Contact = () => {
         <p className="mt-10 text-center lg:text-left">
           ¡Hola! Si tienes alguna pregunta, comentario o solicitud, por favor
           <br />
-          no dudes utilizar el formulario o mediante mis redes sociales.
+          no dudes utilizar el formulario, mediante mis redes sociales
+          <br />o escríbeme a admin@jhoswegenner.com .
         </p>
         <form
           autoComplete="off"

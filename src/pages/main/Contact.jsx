@@ -25,7 +25,7 @@ const Contact = () => {
       setLoading(true);
       emailjs
         .send(
-          "service_u5crfnf",
+          "service_lwln4we",
           "template_pt6i5zw",
           {
             from_name: values.name,
