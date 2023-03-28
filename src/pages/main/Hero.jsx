@@ -13,6 +13,8 @@ import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 // import "../../utils/hovertree.js";
 
+import computerpng from "../../assets/computerpng.png";
+
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
@@ -77,6 +79,15 @@ const Hero = () => {
               Contáctame
             </span>
           </Link>
+        </div>
+      </div>
+      <div className="lg:w-96 md:w-80 w-64 xl:hidden m-auto">
+        <div className="relative">
+          <img
+            src={computerpng}
+            alt="computadora"
+            className="absolute top-[55vh] md:top-[50vh]"
+          />
         </div>
       </div>
       <ComputersCanvas />

@@ -9,6 +9,22 @@ import { textVariant, slideIn } from "../../utils/motion.js";
 import { SectionWrapper } from "../../hoc";
 import Tech from "./Tech";
 
+import { services } from "../../constants/index.js";
+
+const ServiceCard = ({ title, index, icon }) => {
+  return (
+    <div className="relative flex justify-center items-center flex-wrap py-2">
+      <div className="gota hover:rounded-full transition-all duration-300 ease-in-out flex justify-center flex-col items-center">
+        <h3 className="font-semibold relative w-10 h-10 b-[#000] rounded-full shadow-[inset_2px_5px_10px_rgba(0,0,0,0.1),inset_-2px_-5px_10px_rgba(255,255,255,1),15px_15px_10px_rgba(0,0,0,0.05),15px_10px_15px_rgba(0,0,0,0.025)] flex justify-center items-center">{`0${
+          index + 1
+        }`}</h3>
+        <h2 className="font-semibold text-sm p-2 m-1 text-center">{title}</h2>
+        <img src={icon} alt={title} className="w-12" />
+      </div>
+    </div>
+  );
+};
+
 const About = () => {
   const { mouseEnterHandler, mouseLeaverHandler } = useContext(CursorContext);
 
@@ -46,6 +62,11 @@ const About = () => {
         cantidad de experiencia, trabajando y conociendo a empresas y personas
         increíbles y maravillosas de todo el mundo.
       </motion.p>
+      <div className="my-16 flex flex-wrap gap-5 justify-center xl:hidden">
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} index={index} {...service} />
+        ))}
+      </div>
       <Tech />
     </section>
   );
