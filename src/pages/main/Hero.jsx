@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 // import "../../utils/hovertree.js";
 
-import computerpng from "../../assets/computerpng.png";
+import computerpng from "../../assets/computerpng.webp";
 
 const Hero = () => {
   return (

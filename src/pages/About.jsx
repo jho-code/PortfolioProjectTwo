@@ -11,7 +11,7 @@ import { SectionWrapper } from "../hoc";
 import { services } from "../constants/index.js";
 import Tech from "./main/Tech";
 import Experience from "./main/Experience.jsx";
-import Jhoswe from "../assets/jhoswe.png";
+import Jhoswe from "../assets/jhoswe.webp";
 import { transitionGeneral } from "../utils/motion.js";
 
 const ServiceCard = ({ title, index, icon }) => {
