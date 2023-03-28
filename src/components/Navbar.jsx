@@ -26,7 +26,7 @@ const Navbar = () => {
         bg
           ? "bg-[#EDF4FF] dark:bg-[#090f24] h-[4rem] lg:h-[5.5rem]"
           : "h-[5rem] lg:h-[6.5rem]"
-      } flex items-center fixed w-full px-[2rem] lg:px-[5rem] z-30  transition-all duration-300`}
+      } flex items-center fixed w-full px-[2rem] lg:px-[5rem] z-30 transition-all duration-300`}
     >
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">
         {/* logo */}
@@ -36,8 +36,8 @@ const Navbar = () => {
             alt="logo"
             className="w-12 h-12 object-contain"
             onClick={() => {
-              setActive("");
               window.scrollTo(0, 0);
+              setActive("");
             }}
           />
         </Link>
@@ -53,8 +53,8 @@ const Navbar = () => {
                   : "text-secondary dark:text-white"
               } hover:text-tertiary dark:hover:text-tertiary text-[.85rem] font-medium cursor-pointer uppercase ease-in-out duration-300 transition-colors`}
               onClick={() => {
-                setActive(link.title);
                 window.scrollTo(0, 0);
+                setActive(link.title);
               }}
             >
               {link.title}
