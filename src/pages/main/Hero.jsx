@@ -37,7 +37,7 @@ const Hero = () => {
             transition={transitionGeneral}
           >
             <h1 className="h1 text-center lg:text-left">
-              Hola, soy <span className="text-tertiary">Jhoswe Genner &</span>
+              Hola, soy <span className="text-tertiary">aJhoswe Genner &</span>
             </h1>
             <div className="mt-8 lg:mt-0 text-[1.1rem] lg:text-[1.3rem] text-center lg:text-left font-secondary mb-12 lg:mb-10">
               <span> Soy </span>
