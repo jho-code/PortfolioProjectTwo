@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 // import components
+// import DarkModel from "../components/DarkModel";
 import DarkModel from "../components/DarkModel";
 import Socials from "../constants/Socials.jsx";
 import MobileNav from "../components/MobileNav";
@@ -50,7 +51,7 @@ const Navbar = () => {
               className={`${
                 active === link.title
                   ? "text-tertiary"
-                  : "text-secondary dark:text-white"
+                  : "text-primary dark:text-white"
               } hover:text-tertiary dark:hover:text-tertiary text-[.85rem] font-medium cursor-pointer uppercase ease-in-out duration-300 transition-colors`}
               onClick={() => {
                 window.scrollTo(0, 0);

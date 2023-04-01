@@ -1,6 +1,3 @@
-import { useContext } from "react";
-import { CursorContext } from "../../context/CursorContext.jsx";
-
 // import motion
 import { motion } from "framer-motion";
 
@@ -26,7 +23,7 @@ const FeedbackCard = ({
   >
     <p className="text-5xl font-primary">"</p>
     <div className="mt-1">
-      <p className="text-xs">{testimonial}</p>
+      <p className="text-sm">{testimonial}</p>
       <div className="mt-7 flex justify-between items-center gap-1">
         <div className="flex-1 flex flex-col text-sm up">
           <p className="font-medium uppercase">
@@ -48,17 +45,10 @@ const FeedbackCard = ({
 );
 
 const Feedbacks = () => {
-  const { mouseEnterHandler, mouseLeaverHandler } = useContext(CursorContext);
-
   return (
     <section>
       <div className={`min-h-[350px]`}>
-        <motion.div
-          onMouseEnter={mouseEnterHandler}
-          onMouseLeave={mouseLeaverHandler}
-          variants={textVariant()}
-          className="text-b"
-        >
+        <motion.div variants={textVariant()} className="text-b">
           <p className="p text-center lg:text-left">¿Qué dicen de mi?</p>
           <h2 className="h2 text-center lg:text-left">Testimonios</h2>
         </motion.div>

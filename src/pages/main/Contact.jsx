@@ -1,6 +1,3 @@
-import { useContext } from "react";
-import { CursorContext } from "../../context/CursorContext.jsx";
-
 import { useState } from "react";
 
 // import motion
@@ -18,7 +15,6 @@ import { basicSchema } from "../../schemas";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
-  const { mouseEnterHandler, mouseLeaverHandler } = useContext(CursorContext);
 
   const onSubmit = (values, actions) => {
     try {
@@ -75,7 +71,7 @@ const Contact = () => {
   return (
     <section className="lg:flex-row flex-col-reverse flex lg:gap-10 overflow-hidden">
       <motion.div variants={slideIn("left", "tween", 0.2, 1)}>
-        <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaverHandler}>
+        <div>
           <p className="p mt-10 text-center lg:text-left">Hablemos</p>
           <h2 className="h2 text-center lg:text-left">Contacto</h2>
         </div>

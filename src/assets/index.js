@@ -28,9 +28,7 @@ import novotel from "./company/novotel.webp";
 import condor from "./company/condor.webp";
 import latam from "./company/latam.webp";
 
-import carrent from "./carrent.webp";
-import jobit from "./jobit.webp";
-import tripguide from "./tripguide.webp";
+import zulemasvg from "./zulemaSvg.svg";
 
 export {
   logo,
@@ -60,7 +58,5 @@ export {
   novotel,
   condor,
   latam,
-  carrent,
-  jobit,
-  tripguide,
+  zulemasvg,
 };

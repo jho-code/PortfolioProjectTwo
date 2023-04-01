@@ -1,10 +1,5 @@
-import { useContext } from "react";
-import { CursorContext } from "../../context/CursorContext.jsx";
-
 // import framer motion
 import { motion } from "framer-motion";
-
-// import Hero Slider
 
 // import components
 import { SectionWrapper } from "../../hoc";
@@ -15,6 +10,8 @@ import {
   textVariant,
   slideIn,
 } from "../../utils/motion";
+
+// import link
 import { Link } from "react-router-dom";
 
 // import icons
@@ -24,24 +21,24 @@ const ProjectCard = ({ index, name, description, image, source_code_link }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.2, 0.75)}>
       {/* card */}
-      <div className="relative h-60 overflow-hidden shadow-[0px_5px_15px_rgba(0,0,0,0.2)] flex justify-center items-center group bg-black">
+      <div className="relative h-60 overflow-hidden shadow-[0px_5px_15px_rgba(0,0,0,0.2)] dark:shadow-[0px_5px_15px_rgba(255,255,255,0.2)] flex justify-center items-center group ">
         {/* box img */}
         <div>
-          <img src={image} alt="" />
+          <img src={image} alt="" className="h-28" />
         </div>
         {/* content */}
-        <div className="absolute -bottom-96 w-full h-full flex justify-center items-center z-10 flex-col backdrop-blur-lg shadow-[0_-10px_10px_rgba(0,0,0,0.1)] border border-solid border-[rgba(255,255,255,0.2)]  group-hover:bottom-0 transition-all duration-[.5s]">
+        <div className="text-primary dark:text-white absolute -bottom-96 w-full h-full flex justify-center items-center z-10 flex-col backdrop-blur-lg shadow-[0_-10px_10px_rgba(0,0,0,0.1)] border border-solid border-[rgba(255,255,255,0.2)]  group-hover:bottom-0 transition-all duration-[.5s]">
           {/* box content */}
-          <div className="flex justify-center items-center flex-col">
-            <h3 className="text-white uppercase tracking-[0.2px] font-medium text-sm text-center my-4 leading-4 duration-[1.5s] opacity-0 -translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-all delay-300">
+          <div className=" flex justify-center items-center flex-col">
+            <h3 className="uppercase tracking-[0.2px] font-medium text-sm text-center my-4 leading-4 duration-[1.5s] opacity-0 -translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-all delay-300">
               {name}
             </h3>
-            <p className="text-white uppercase text-xs px-4-3 font-medium text-center duration-[1.5s] opacity-0 translate-y-10 delay-300 group-hover:opacity-100 group-hover:translate-y-0 transition-all">
+            <p className=" uppercase text-xs px-4-3 font-medium text-center duration-[1.5s] opacity-0 translate-y-10 delay-300 group-hover:opacity-100 group-hover:translate-y-0 transition-all">
               {description}
             </p>
           </div>
           {/* icons */}
-          <div className="flex gap-4 mt-5 text-white duration-[1.5s] opacity-0 translate-y-10 delay-300 group-hover:opacity-100 text-lg group-hover:translate-y-0 transition-all">
+          <div className="flex gap-4 mt-5 duration-[1.5s] opacity-0 translate-y-10 delay-300 group-hover:opacity-100 text-lg group-hover:translate-y-0 transition-all">
             <Link target={"_blank"} to={`${source_code_link}`}>
               <AiFillGithub />
             </Link>
@@ -53,15 +50,9 @@ const ProjectCard = ({ index, name, description, image, source_code_link }) => {
 };
 
 const Works = () => {
-  const { mouseEnterHandler, mouseLeaverHandler } = useContext(CursorContext);
-
   return (
     <section>
-      <motion.div
-        variants={textVariant()}
-        onMouseEnter={mouseEnterHandler}
-        onMouseLeave={mouseLeaverHandler}
-      >
+      <motion.div variants={textVariant()}>
         <p className="p text-center lg:text-left">Mi Portafolio</p>
         <h2 className="h2 text-center lg:text-left">Mis Últimos proyectos</h2>
       </motion.div>

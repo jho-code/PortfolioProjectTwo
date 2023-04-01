@@ -1,5 +1,3 @@
-import { useContext } from "react";
-import { CursorContext } from "../context/CursorContext.jsx";
 import { useState } from "react";
 
 // import motion
@@ -11,13 +9,12 @@ import emailjs from "@emailjs/browser";
 // import components
 import { EarthCanvas } from "../components/canvas";
 import { SectionWrapper } from "../hoc";
-import { slideIn, transitionGeneral } from "../utils/motion.js";
+import { transitionGeneral } from "../utils/motion.js";
 import { useFormik } from "formik";
 import { basicSchema } from "../schemas";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
-  const { mouseEnterHandler, mouseLeaverHandler } = useContext(CursorContext);
 
   const onSubmit = (values, actions) => {
     try {
@@ -80,13 +77,7 @@ const Contact = () => {
       className="lg:flex-row flex-col-reverse flex lg:gap-10 overflow-hidden"
     >
       <div>
-        <h2
-          onMouseEnter={mouseEnterHandler}
-          onMouseLeave={mouseLeaverHandler}
-          className="h2 text-center lg:text-left"
-        >
-          Contacto
-        </h2>
+        <h2 className="h2 text-center lg:text-left">Contacto</h2>
         <p className="mt-10 text-center lg:text-left">
           ¡Hola! Si tienes alguna pregunta, comentario o solicitud, por favor
           <br />

@@ -1,6 +1,3 @@
-import { useContext } from "react";
-import { CursorContext } from "../context/CursorContext.jsx";
-
 // import motion
 import { motion } from "framer-motion";
 
@@ -16,12 +13,12 @@ import { transitionGeneral } from "../utils/motion.js";
 
 const ServiceCard = ({ title, index, icon }) => {
   return (
-    <div className="relative flex justify-center items-center flex-wrap py-2">
+    <div className="relative flex justify-center items-center flex-wrap py-3">
       <div className="gota hover:rounded-full transition-all duration-300 ease-in-out flex justify-center flex-col items-center">
-        <h3 className="font-semibold relative w-10 h-10 b-[#000] rounded-full shadow-[inset_2px_5px_10px_rgba(0,0,0,0.1),inset_-2px_-5px_10px_rgba(255,255,255,1),15px_15px_10px_rgba(0,0,0,0.05),15px_10px_15px_rgba(0,0,0,0.025)] flex justify-center items-center">{`0${
+        <h3 className="font-semibold relative w-8 h-8 b-[#000] rounded-full shadow-[inset_2px_5px_10px_rgba(0,0,0,0.1),inset_-2px_-5px_10px_rgba(255,255,255,1),15px_15px_10px_rgba(0,0,0,0.05),15px_10px_15px_rgba(0,0,0,0.025)] flex justify-center items-center">{`0${
           index + 1
         }`}</h3>
-        <h2 className="font-semibold text-sm p-2 m-1 text-center">{title}</h2>
+        <h2 className="font-semibold text-sm p-1 m-1 text-center">{title}</h2>
         <img src={icon} alt={title} className="w-12" />
       </div>
     </div>
@@ -29,8 +26,6 @@ const ServiceCard = ({ title, index, icon }) => {
 };
 
 const About = () => {
-  const { mouseEnterHandler, mouseLeaverHandler } = useContext(CursorContext);
-
   return (
     <motion.section
       initial={{ opacity: 0, y: "100%" }}
@@ -38,7 +33,7 @@ const About = () => {
       exit={{ opacity: 0, y: "100%" }}
       transition={transitionGeneral}
     >
-      <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaverHandler}>
+      <div>
         <h2 className="h2 text-center lg:text-left">Acerca de Mi</h2>
       </div>
       <div className="flex flex-col lg:flex-row h-full items-center justify-center gap-x-24 text-center lg:text-left ">
@@ -90,11 +85,7 @@ const About = () => {
       <Experience />
       <Tech />
       <div>
-        <h2
-          onMouseEnter={mouseEnterHandler}
-          onMouseLeave={mouseLeaverHandler}
-          className="p font-secondary font-normal lg:text-[1.2rem] text-[1rem] text-center"
-        >
+        <h2 className="p font-secondary font-normal lg:text-[1.2rem] text-[1rem] text-center">
           ¿Quieres hablar conmigo?
         </h2>
         <div className="flex justify-center">

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-primary dark:text-white font-secondary dark:bg-[#050816] bg-white lg:text-base text-sm;
+    @apply text-primary dark:text-white dark:bg-black bg-white lg:text-base text-base;
   }
 
   .h1 {
@@ -35,17 +35,6 @@
   scroll-behavior: smooth;
 }
 
-/* gota */
-.gota {
-  position: relative;
-  width: 175px;
-  height: 175px;
-  box-shadow: inset 50px 50px 30px rgba(0, 0, 0, 0.05),
-    25px 35px 20px rgba(0, 0, 0, 0.05), 25px 30px 30px rgba(0, 0, 0, 0.05),
-    inset -20px -20px 25px rgba(255, 255, 255, 0.9);
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-}
-
 .input {
   outline: none;
   border-bottom: 1px solid #6e8b9f;
@@ -67,10 +56,21 @@ textarea::placeholder {
   color: #6e8b9f;
 }
 
+/* gota */
+.gota {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  box-shadow: inset 50px 50px 30px rgba(0, 0, 0, 0.05),
+    25px 35px 20px rgba(0, 0, 0, 0.05), 25px 30px 30px rgba(0, 0, 0, 0.05),
+    inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
 .gota::before {
   content: "";
   position: absolute;
-  top: 25px;
+  top: 28px;
   left: 30px;
   width: 20px;
   height: 20px;
@@ -94,7 +94,7 @@ textarea::placeholder {
 /* boton */
 .btn {
   position: relative;
-  border: 1.5px solid #546881;
+  border: 1.5px solid rgb(31 41 55);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -105,7 +105,7 @@ textarea::placeholder {
   align-items: center;
   gap: 10px;
   cursor: pointer;
-  transition: border 0.5s ease-in-out;
+  transition: border 0.3s ease-in-out;
   transform-origin: right;
 }
 
@@ -124,7 +124,7 @@ textarea::placeholder {
   height: 100%;
   background-color: #e37c6c;
   transform: scaleX(0);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   transform-origin: right;
 }
 
@@ -139,16 +139,16 @@ textarea::placeholder {
   display: inline-block;
   width: 2px;
   height: 30px;
-  background-color: #546881;
-  transition: 0.5s, width 0.5s, height 0.5s;
-  transition-delay: 0s, 0.5s, 1s;
+  background-color: rgb(31 41 55);
+  transition: 0.3s, width 0.5s, height 0.5s;
+  transition-delay: 0s, 0.3s, 1s;
 }
 
 .btn:hover i {
   width: 30px;
   height: 2px;
   background: #fff;
-  transition-delay: 0s, 1s, 0.5s;
+  transition-delay: 0s, 0.5s, 0.2s;
 }
 
 .btn i::before {
@@ -161,13 +161,13 @@ textarea::placeholder {
   background: transparent;
   rotate: 0;
   transform-origin: right;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .btn:hover i::before {
   background: #fff;
   rotate: 45deg;
-  transition-delay: 1.5s;
+  transition-delay: 1s;
 }
 
 .btn i::after {
@@ -180,13 +180,13 @@ textarea::placeholder {
   background: transparent;
   rotate: 0;
   transform-origin: right;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .btn:hover i::after {
   background: #fff;
   rotate: -45deg;
-  transition-delay: 1.5s;
+  transition-delay: 1s;
 }
 
 .hash-span {
@@ -300,81 +300,4 @@ textarea::placeholder {
   text-indent: -9999em;
   animation: mulShdSpin 1.1s infinite ease;
   transform: translateZ(0);
-}
-
-@keyframes mulShdSpin {
-  0%,
-  100% {
-    box-shadow: 0em -2.6em 0em 0em #ffffff,
-      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
-      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
-      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
-      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
-      -2.6em 0em 0 0em rgba(255, 255, 255, 0.5),
-      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7);
-  }
-  12.5% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.7),
-      1.8em -1.8em 0 0em #ffffff, 2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
-      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
-      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
-      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
-  }
-  25% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5),
-      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7), 2.5em 0em 0 0em #ffffff,
-      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
-      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
-      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
-  }
-  37.5% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
-      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5),
-      2.5em 0em 0 0em rgba(255, 255, 255, 0.7), 1.75em 1.75em 0 0em #ffffff,
-      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
-      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
-  }
-  50% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
-      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
-      2.5em 0em 0 0em rgba(255, 255, 255, 0.5),
-      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.7), 0em 2.5em 0 0em #ffffff,
-      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
-      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
-  }
-  62.5% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
-      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
-      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
-      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5),
-      0em 2.5em 0 0em rgba(255, 255, 255, 0.7), -1.8em 1.8em 0 0em #ffffff,
-      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
-  }
-  75% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
-      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
-      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
-      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
-      0em 2.5em 0 0em rgba(255, 255, 255, 0.5),
-      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.7), -2.6em 0em 0 0em #ffffff,
-      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
-  }
-  87.5% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
-      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
-      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
-      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
-      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
-      -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
-  }
 }

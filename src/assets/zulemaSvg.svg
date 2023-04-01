@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 850.39 708.66">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: url(#Degradado_sin_nombre_56);
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        opacity: .8;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        fill: url(#Degradado_sin_nombre_89);
+      }
+
+      .cls-2 {
+        stroke: url(#Degradado_sin_nombre_56-2);
+      }
+
+      .cls-4 {
+        fill: #1d1d1b;
+        font-family: Rialto, Rialto;
+        font-size: 914.02px;
+        letter-spacing: .14em;
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_89" data-name="Degradado sin nombre 89" x1="21.12" y1="402.67" x2="736.67" y2="402.67" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d1a979"/>
+      <stop offset=".02" stop-color="#bf996e"/>
+      <stop offset=".05" stop-color="#a27f5d"/>
+      <stop offset=".09" stop-color="#8e6c51"/>
+      <stop offset=".12" stop-color="#82614a"/>
+      <stop offset=".15" stop-color="#7e5e48"/>
+      <stop offset=".25" stop-color="#a58160"/>
+      <stop offset=".43" stop-color="#d1a979"/>
+      <stop offset=".51" stop-color="#b18b61"/>
+      <stop offset=".63" stop-color="#8d6846"/>
+      <stop offset=".69" stop-color="#7f5b3c"/>
+      <stop offset=".87" stop-color="#d1a979"/>
+      <stop offset=".89" stop-color="#c8a172"/>
+      <stop offset=".93" stop-color="#af8b60"/>
+      <stop offset=".98" stop-color="#886843"/>
+      <stop offset="1" stop-color="#7b5d3a"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_56" data-name="Degradado sin nombre 56" x1="98.31" y1="319.12" x2="819.48" y2="319.12" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#98473e"/>
+      <stop offset=".08" stop-color="#b49082"/>
+      <stop offset=".38" stop-color="#d6c3c9"/>
+      <stop offset=".56" stop-color="#fff6e3"/>
+      <stop offset=".8" stop-color="#d6c3c9"/>
+      <stop offset=".96" stop-color="#b49082"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_56-2" data-name="Degradado sin nombre 56" x1="113.23" y1="305.71" x2="830.64" y2="305.71" xlink:href="#Degradado_sin_nombre_56"/>
+  </defs>
+  <polygon class="cls-3" points="21.12 101.73 736.67 703.6 736.67 101.73 21.12 101.73"/>
+  <polygon class="cls-1" points="815.36 620.91 99.81 19.04 99.81 620.91 815.36 620.91"/>
+  <text class="cls-4" transform="translate(252.18 559.43) scale(.59)"><tspan x="0" y="0">E</tspan></text>
+  <polygon class="cls-2" points="829.27 606.93 113.73 5.06 113.73 606.93 829.27 606.93"/>
+</svg>

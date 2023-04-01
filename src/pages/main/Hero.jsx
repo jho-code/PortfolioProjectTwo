@@ -18,10 +18,6 @@ import computerpng from "../../assets/computerpng.webp";
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
-      {/*       <canvas
-        id="canvas"
-        className="absolute left-0 w-[1366] max-w-full h-full z-[1]"
-      ></canvas> */}
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
@@ -30,14 +26,9 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 orange-gradient" />
         </div>
         <div className="flex flex-col justify-center items-center lg:items-start">
-          <motion.div
-            initial={{ opacity: 0, y: "-50%" }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: "-50%" }}
-            transition={transitionGeneral}
-          >
+          <div>
             <h1 className="h1 text-center lg:text-left">
-              Hola, soy <span className="text-tertiary">aJhoswe Genner &</span>
+              Hola, soy <span className="text-tertiary">Jhoswe Genner &</span>
             </h1>
             <div className="mt-8 lg:mt-0 text-[1.1rem] lg:text-[1.3rem] text-center lg:text-left font-secondary mb-12 lg:mb-10">
               <span> Soy </span>
@@ -69,7 +60,7 @@ const Hero = () => {
                 JavaScript, React, NodeJS y ExpressJS.
               </span>
             </p>
-          </motion.div>
+          </div>
           <Link
             to={"/contact"}
             className="inline-block z-[20] leading-4 ease-in-out duration-[0.5s] btn mb-[1.5rem] btn2"
@@ -87,12 +78,14 @@ const Hero = () => {
             src={computerpng}
             alt="computadora"
             className="absolute top-[55vh] md:top-[50vh]"
+            rel="preload"
+            as="image"
           />
         </div>
       </div>
       <ComputersCanvas />
       <div className="flex absolute bottom-3 lg:bottom-5 w-full justify-center items-center">
-        <div className="w-9 h-16 rounded-3xl border-[3px] border-secondary flex justify-center items-start p-2">
+        <div className="w-9 h-16 rounded-3xl border-[3px] border-primary flex justify-center items-start p-2">
           <motion.div
             animate={{ y: [0, 24, 0] }}
             transition={{
