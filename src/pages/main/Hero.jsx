@@ -52,12 +52,15 @@ const Hero = () => {
               />
             </div>
             <p className="text-center mb-12 lg:text-left w-[100%] lg:w-[70%] hidden sm:block">
-              Soy desarrollador full stack con más de 3 años en programación y 9
-              años de experiencia en la industria del turismo.
+              Soy un programador Full Stack altamente motivado, disciplinado y
+              orientado a resultados.
               <span className="hidden lg:inline-block">
-                Me he destacado en el desarrollo de aplicaciones web escalables,
-                seguras y de alta calidad utilizando tecnologías como HTML, CSS,
-                JavaScript, React, NodeJS y ExpressJS.
+                Poseo habilidades en HTML, CSS y JavaScript, y he desarrollado
+                aplicaciones tanto en el Front-End como en el Back-End
+                utilizando tecnologías como React.js, Next.js, Node.js y
+                Express.js. Además, tengo experiencia en lenguajes de
+                programación como Java, y en bases de datos como MongoDB,
+                Postgresql y MySql.
               </span>
             </p>
           </div>
